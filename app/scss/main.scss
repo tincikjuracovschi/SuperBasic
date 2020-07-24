@@ -30,16 +30,16 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
 
-    & .welcome-section-left {
-      padding: 100px 0px 50px 150px;
+    & .welcome-section--left {
+      padding: 100px 0 50px 150px;
       font-size: 46px;
       color: #7452a3;
     }
-    & .welcome-section-right {
+    & .welcome-section--right {
       font-size: 200px;
-      display: grid;
-      justify-items: end;
-      align-items: end;
+      display: block;
+      margin-left: auto;
+      margin-top: auto;
       opacity: 0.05;
       color: #7452a3;
     }
