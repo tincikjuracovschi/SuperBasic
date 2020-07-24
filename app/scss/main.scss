@@ -120,6 +120,7 @@ main {
     & #welcome-section {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: none;
+
       & .welcome-section--left {
         padding: 50px 50px 50px 50px;
         font-size: 20px;
@@ -128,7 +129,6 @@ main {
       & .welcome-section--right {
         font-size: 50px;
         margin-top: 0;
-  
       }
     }
 
