@@ -28,7 +28,7 @@
 main {
   & #welcome-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
 
     & .welcome-section--left {
       padding: 100px 0 50px 150px;
@@ -45,8 +45,112 @@ main {
       color: #7452a3;
     }
   }
+
+  & #projects {
+    & .box {
+      margin: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      & .container-project-left {
+        display: grid;
+        justify-content: end;
+      }
+
+      & .container-project {
+        display: grid;
+        justify-content: start;
+      }
+    }
+  }
 }
 
 .fa-bars::before {
   color: #7452a3;
+}
+
+.project-tile {
+  margin-top: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #060606;
+}
+
+.diff_text {
+  color: #7452a3;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1020px) {
+  main {
+    & #welcome-section {
+      & .welcome-section--left {
+        padding: 50px 50px 50px 50px;
+        font-size: 30px;
+      }
+
+      & .welcome-section--right {
+        font-size: 150px;
+      }
+    }
+
+    & #projects {
+      & .box {
+        & .container-project-left {
+          display: grid;
+          justify-content: end;
+        }
+
+        & .container-project {
+          display: grid;
+          justify-content: start;
+        }
+      }
+    }
+  }
+  .project-img {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    & #welcome-section {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: none;
+      & .welcome-section--left {
+        padding: 50px 50px 50px 50px;
+        font-size: 20px;
+      }
+
+      & .welcome-section--right {
+        font-size: 50px;
+        margin-top: 0;
+  
+      }
+    }
+
+    & #projects {
+      & .box {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: none;
+
+        & .container-project-left {
+          display: grid;
+          justify-content: center;
+        }
+
+        & .container-project {
+          display: grid;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .project-img {
+    max-width: 280px;
+  }
 }
