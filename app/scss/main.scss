@@ -87,7 +87,7 @@ main {
   main {
     & #welcome-section {
       & .welcome-section--left {
-        padding: 50px 50px 50px 50px;
+        padding: 50px;
         font-size: 30px;
       }
 
@@ -122,7 +122,6 @@ main {
       grid-template-columns: none;
 
       & .welcome-section--left {
-        padding: 50px 50px 50px 50px;
         font-size: 20px;
       }
 
