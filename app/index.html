@@ -34,6 +34,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
@@ -41,7 +45,25 @@
   <body>
     <header id="header">
       <div class="logo">SuperBasic</div>
-      <div class="meniu"><i class="fa fa-2x fa-bars"></i></div>
+      <div class="meniu">
+        <span style="font-size: 20px; cursor: pointer;" onclick="openNav()">
+          <i class="fa fa-2x fa-bars"></i>
+        </span>
+      </div>
+      <nav id="navbar">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            &times;
+          </a>
+
+          <div class="overlay-content">
+            <a href="#header" onclick="closeNav()">Home</a>
+            <a href="#clients" onclick="closeNav()">About Us</a>
+            <a href="#projects" onclick="closeNav()">Works</a>
+            <a href="#conversation" onclick="closeNav()">Contact Us</a>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <section id="welcome-section">
@@ -53,23 +75,25 @@
       <section id="projects">
         <div class="box">
           <div class="container-project-left">
-            <div class="poject-image">
-              <img
-                class="project-img"
-                src="../img/_src/Bitmap.png"
-                alt="Super Sonic Studio"
-              />
-            </div>
-            <div class="project-tile">
-              <div class="diff_text">Super Sonic Studio</div>
-              <section>Website, User Experience</section>
-            </div>
+            <a href="https://codepen.io/cristina-juracovschi/full/oNbaBWx">
+              <div class="poject-image">
+                <img
+                  class="project-img"
+                  src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595743944/Bitmap_kmi79b.png"
+                  alt="Super Sonic Studio"
+                />
+              </div>
+              <div class="project-tile">
+                <div class="diff_text">Super Sonic Studio</div>
+                <section>Website, User Experience</section>
+              </div>
+            </a>
           </div>
           <div class="container-project">
             <div class="poject-image">
               <img
                 class="project-img"
-                src="../img/_src/Bitmap_2.png"
+                src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595743956/Bitmap_1_d4px0p.png"
                 alt="Rapid Aim Agency"
               />
             </div>
@@ -84,7 +108,7 @@
             <div class="poject-image">
               <img
                 class="project-img"
-                src="../img/_src/Google_Support_App.png"
+                src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595743977/Google_Support_App_cp1n6p.png"
                 alt="Google Support App"
               />
             </div>
@@ -97,7 +121,7 @@
             <div class="poject-image">
               <img
                 class="project-img"
-                src="../img/_src/Seller_Sure.png"
+                src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595743999/Seller_Sure_kwimlb.png"
                 alt="Seller Sure"
               />
             </div>
@@ -112,7 +136,7 @@
             <div class="poject-image">
               <img
                 class="project-img"
-                src="../img/_src/Smart_Seller_Console.png"
+                src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595744010/Smart_Seller_Console_rb8ivn.png"
                 alt="Smart Seller Console"
               />
             </div>
@@ -125,7 +149,7 @@
             <div class="poject-image">
               <img
                 class="project-img"
-                src="../img/_src/Fashion_Bazaar.png"
+                src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595744020/Fashion_Bazaar_jq9xm0.png"
                 alt="Fashion Bazaar"
               />
             </div>
@@ -135,8 +159,125 @@
             </div>
           </div>
         </div>
+        <div class="div-more">
+          <div class="div-more--container">
+            <a href="#">MORE</a>
+          </div>
+        </div>
       </section>
+      <section id="clients">
+        <div class="clients--text">Our Clients</div>
+        <div class="clients--images">
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833212/hipster_logo_ul9h93.png"
+              alt="hipster_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833222/vintage_logo_kqysly.png"
+              alt="vintage_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
+              alt="creatives_design_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
+              alt="retro_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833251/creatives_logo_jwnzxw.png"
+              alt="creatives_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
+              alt="retro_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
+              alt="creatives_design_logo"
+            />
+          </div>
+          <div class="box_img">
+            <img
+              class="client_img"
+              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833268/vintage_logo_1_dz0xwm.png"
+              alt="vintage_logo"
+            />
+          </div>
+        </div>
+        <div class="div-align">
+          <i class="fa fa-angle-left"></i>
+          <i class="fa fa-angle-right"></i>
+        </div>
+      </section>
+      <section id="conversation">
+        <div class="conversation--title">Want to Start a Conversation</div>
+        <div class="conversation--text">
+          Reach out to us,if you need to learn more about our company or get our
+          consulation and <br />
+          etimation of your project.
+        </div>
+        <a
+          id="profile-link"
+          href="https://github.com/tincikjuracovschi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="contact_us">
+            Contact us
+          </div>
+        </a>
+      </section>
+      <footer id="footer">
+        <div class="top">
+          <div class="footer--left-top">SuperBasic</div>
+          <div class="footer--right-top">
+            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-instagram"></i>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="footer--left-bottom">
+            Home | About Us | Works | Contac Us
+          </div>
+          <div class="footer--right-bottom">
+            <i class="fa fa-copyright"></i>&nbsp;2020 SuperBasic.com. All rights
+            reserved.
+          </div>
+        </div>
+      </footer>
     </main>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
