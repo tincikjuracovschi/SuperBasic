@@ -38,6 +38,7 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
@@ -46,21 +47,24 @@
     <header id="header">
       <div class="logo">SuperBasic</div>
       <div class="meniu">
-        <span style="font-size: 20px; cursor: pointer;" onclick="openNav()">
+        <span class="icon-nav" onclick="openNav()">
           <i class="fa fa-2x fa-bars"></i>
         </span>
       </div>
       <nav id="navbar">
         <div id="myNav" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <a
+            href="https://github.com/tincikjuracovschi"
+            class="closebtn"
+            onclick="closeNav()"
+          >
             &times;
           </a>
-
           <div class="overlay-content">
-            <a href="#header" onclick="closeNav()">Home</a>
-            <a href="#clients" onclick="closeNav()">About Us</a>
-            <a href="#projects" onclick="closeNav()">Works</a>
-            <a href="#conversation" onclick="closeNav()">Contact Us</a>
+            <a href="#header" class="closeNav">Home</a>
+            <a href="#clients" class="closeNav">About Us</a>
+            <a href="#projects" class="closeNav">Works</a>
+            <a href="#conversation" class="closeNav">Contact Us</a>
           </div>
         </div>
       </nav>
@@ -157,79 +161,168 @@
               <div class="diff_text">Fashion Bazaar</div>
               <section>Ecommerce Website</section>
             </div>
-          </div>
-        </div>
-        <div class="div-more">
-          <div class="div-more--container">
-            <a href="#">MORE</a>
+            <div class="div-more--container">
+              <a href="#">MORE</a>
+            </div>
           </div>
         </div>
       </section>
       <section id="clients">
-        <div class="clients--text">Our Clients</div>
-        <div class="clients--images">
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833212/hipster_logo_ul9h93.png"
-              alt="hipster_logo"
-            />
+        <div id="carousel" class="carousel">
+          <input
+            class="carousel-active"
+            type="radio"
+            id="carousel-1"
+            name="carousel"
+            aria-hidden="true"
+            hidden
+            checked="checked"
+          />
+          <div class="carousel-item">
+            <div class="clients">
+              <div class="clients--text">Our Clients</div>
+              <div class="clients--images">
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833212/hipster_logo_ul9h93.png"
+                    alt="hipster_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833222/vintage_logo_kqysly.png"
+                    alt="vintage_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
+                    alt="creatives_design_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
+                    alt="retro_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833251/creatives_logo_jwnzxw.png"
+                    alt="creatives_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
+                    alt="retro_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
+                    alt="creatives_design_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833268/vintage_logo_1_dz0xwm.png"
+                    alt="vintage_logo"
+                  />
+                </div>
+              </div>
+              <div class="div-align" aria-hidden="true">
+                <label
+                  for="carousel-2"
+                  class="carousel-control prev"
+                  title="Prev"
+                  ><i class="fa fa-angle-left"></i
+                ></label>
+                <label
+                  for="carousel-2"
+                  class="carousel-control next"
+                  title="Next"
+                  ><i class="fa fa-angle-right"></i
+                ></label>
+              </div>
+            </div>
           </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833222/vintage_logo_kqysly.png"
-              alt="vintage_logo"
-            />
+
+          <input
+            class="carousel-active"
+            type="radio"
+            id="carousel-2"
+            name="carousel"
+            aria-hidden="true"
+            hidden
+          />
+          <div class="carousel-item">
+            <div class="clients">
+              <div class="clients--text">Our Clients</div>
+              <div class="clients--images">
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595928659/8ce7396487bc21b94f5abb9bfb3568d1_yxpyop.png"
+                    alt="hipster_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833222/vintage_logo_kqysly.png"
+                    alt="vintage_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
+                    alt="creatives_design_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
+                    alt="retro_logo"
+                  />
+                </div>
+                <div class="box_img">
+                  <img
+                    class="client_img"
+                    src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833251/creatives_logo_jwnzxw.png"
+                    alt="creatives_logo"
+                  />
+                </div>
+              </div>
+              <div class="div-align" aria-hidden="true">
+                <label
+                  for="carousel-1"
+                  class="carousel-control prev"
+                  title="Prev"
+                  ><i class="fa fa-angle-left"></i
+                ></label>
+                <label
+                  for="carousel-1"
+                  class="carousel-control next"
+                  title="Next"
+                  ><i class="fa fa-angle-right"></i
+                ></label>
+              </div>
+            </div>
           </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
-              alt="creatives_design_logo"
-            />
-          </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
-              alt="retro_logo"
-            />
-          </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833251/creatives_logo_jwnzxw.png"
-              alt="creatives_logo"
-            />
-          </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833241/retro_logo_eqreh9.png"
-              alt="retro_logo"
-            />
-          </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833232/creatives_design_logo_j9ylyt.png"
-              alt="creatives_design_logo"
-            />
-          </div>
-          <div class="box_img">
-            <img
-              class="client_img"
-              src="https://res.cloudinary.com/dybef1r4r/image/upload/v1595833268/vintage_logo_1_dz0xwm.png"
-              alt="vintage_logo"
-            />
-          </div>
-        </div>
-        <div class="div-align">
-          <i class="fa fa-angle-left"></i>
-          <i class="fa fa-angle-right"></i>
         </div>
       </section>
+
       <section id="conversation">
         <div class="conversation--title">Want to Start a Conversation</div>
         <div class="conversation--text">
@@ -277,6 +370,16 @@
       function closeNav() {
         document.getElementById("myNav").style.width = "0%";
       }
+
+      $(".closeNav").click(() => {
+        closeNav();
+      });
+
+      $(document).ready(function () {
+        $(".closebtn").click(function (event) {
+          event.preventDefault();
+        });
+      });
     </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="js/scripts.min.js"></script>

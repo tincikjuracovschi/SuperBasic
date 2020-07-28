@@ -22,6 +22,11 @@
     display: grid;
     justify-items: end;
     align-items: center;
+
+    & .icon-nav {
+      font-size: 20px;
+      cursor: pointer;
+    }
   }
 
   & #navbar {
@@ -34,7 +39,6 @@ main {
   & #welcome-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
 
     & .welcome-section--left {
       padding: 100px 0 50px 150px;
@@ -72,24 +76,18 @@ main {
       }
     }
 
-    & .div-more {
+    & .div-more--container {
       display: grid;
-      justify-items: center;
-      padding: 20px;
-
-      & .div-more--container {
-        width: 85%;
-        display: grid;
-        justify-content: end;
-      }
+      justify-content: end;
+      padding: 20px 0;
     }
   }
 
-  & #clients {
+  & .clients {
     background: linear-gradient(
       to bottom,
-      rgba(175, 151, 223, 0.23) 70%,
-      #fff 70%
+      rgba(175, 151, 223, 0.23) 50%,
+      #fff 50%
     );
     padding-top: 70px;
     display: grid;
@@ -103,13 +101,49 @@ main {
     }
 
     & .clients--images {
-      width: 50%;
+      padding: 5px;
+      background-color: white;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       justify-content: center;
 
       & .box_img {
+        background-color: white;
         width: 250px;
+        display: grid;
+        padding: 50px;
+        justify-content: center;
+        border: 1px solid #ddd;
+
+        &:nth-child(1) {
+          border-left: none;
+          border-top: none;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-top: none;
+        }
+
+        &:nth-child(4) {
+          border-right: none;
+          border-top: none;
+        }
+
+        &:nth-child(5) {
+          border-left: none;
+          border-bottom: none;
+        }
+
+        &:nth-child(6),
+        &:nth-child(7) {
+          border-bottom: none;
+        }
+
+        &:nth-child(8) {
+          border-right: none;
+          border-bottom: none;
+        }
 
         & .client_img {
           width: 100%;
@@ -118,10 +152,11 @@ main {
     }
 
     & .div-align {
-      width: 30%;
       display: grid;
       grid-template-columns: repeat(2, max-content);
-      justify-content: end;
+      justify-self: end;
+      gap: 10px;
+      width: 20%;
     }
   }
 
@@ -294,6 +329,36 @@ ul {
   font-size: 60px;
 }
 
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+}
+
+.carousel-active:checked + .carousel-item {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
+
+.carousel-control {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-active:checked + .carousel-item {
+  transition: opacity 0.6s ease-in;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1020px) {
   main {
     & #welcome-section {
@@ -321,9 +386,24 @@ ul {
         }
       }
     }
+
+    & .clients {
+      & .clients--images {
+        & .box_img {
+          width: 170px;
+          padding: 20px;
+        }
+      }
+    }
   }
+
   .project-img {
     max-width: 300px;
+  }
+
+  .fa-angle-left,
+  .fa-angle-right::before {
+    font-size: 60px;
   }
 }
 
@@ -340,6 +420,7 @@ ul {
 
     & #projects {
       background: linear-gradient(to bottom, #f5f3f8 5%, #fff 5%);
+
       & .box {
         grid-template-rows: max-content;
         grid-template-columns: none;
@@ -356,7 +437,7 @@ ul {
       }
     }
 
-    & #clients {
+    & .clients {
       padding-top: 70px;
       display: grid;
       justify-items: center;
@@ -369,8 +450,32 @@ ul {
         grid-template-columns: repeat(2, max-content);
 
         & .box_img {
-          width: 100px;
+          width: 140px;
+
+          &:nth-child(2) {
+            border-right: none;
+          }
+
+          &:nth-child(3) {
+            border-left: none;
+          }
+
+          &:nth-child(6) {
+            border-right: none;
+          }
+
+          &:nth-child(7) {
+            border-left: none;
+          }
+
+          & .client_img {
+            width: 100%;
+          }
         }
+      }
+
+      & .div-align {
+        width: 50%;
       }
     }
 
@@ -395,6 +500,7 @@ ul {
 
     & #footer {
       padding: 0;
+
       & .top {
         grid-template-columns: none;
         grid-template-rows: repeat(2, max-content);
