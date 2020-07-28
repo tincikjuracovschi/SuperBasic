@@ -235,6 +235,7 @@ main {
 }
 
 a {
+  text-decoration: none;
   color: #000;
 }
 
@@ -253,7 +254,7 @@ ul {
   color: #7452a3;
 }
 
-.fa-angle-left,
+.fa-angle-left::before,
 .fa-angle-right::before {
   padding: 0 10px;
   width: 50px;
@@ -401,7 +402,7 @@ ul {
     max-width: 300px;
   }
 
-  .fa-angle-left,
+  .fa-angle-left::before,
   .fa-angle-right::before {
     font-size: 60px;
   }

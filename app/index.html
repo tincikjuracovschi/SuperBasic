@@ -47,17 +47,13 @@
     <header id="header">
       <div class="logo">SuperBasic</div>
       <div class="meniu">
-        <span class="icon-nav" onclick="openNav()">
+        <span class="icon-nav">
           <i class="fa fa-2x fa-bars"></i>
         </span>
       </div>
       <nav id="navbar">
         <div id="myNav" class="overlay">
-          <a
-            href="https://github.com/tincikjuracovschi"
-            class="closebtn"
-            onclick="closeNav()"
-          >
+          <a href="https://github.com/tincikjuracovschi" class="closebtn">
             &times;
           </a>
           <div class="overlay-content">
@@ -240,16 +236,10 @@
                 </div>
               </div>
               <div class="div-align" aria-hidden="true">
-                <label
-                  for="carousel-2"
-                  class="carousel-control prev"
-                  title="Prev"
+                <label for="carousel-2" title="Prev"
                   ><i class="fa fa-angle-left"></i
                 ></label>
-                <label
-                  for="carousel-2"
-                  class="carousel-control next"
-                  title="Next"
+                <label for="carousel-2" title="Next"
                   ><i class="fa fa-angle-right"></i
                 ></label>
               </div>
@@ -305,16 +295,10 @@
                 </div>
               </div>
               <div class="div-align" aria-hidden="true">
-                <label
-                  for="carousel-1"
-                  class="carousel-control prev"
-                  title="Prev"
+                <label for="carousel-1" title="Prev"
                   ><i class="fa fa-angle-left"></i
                 ></label>
-                <label
-                  for="carousel-1"
-                  class="carousel-control next"
-                  title="Next"
+                <label for="carousel-1" title="Next"
                   ><i class="fa fa-angle-right"></i
                 ></label>
               </div>
@@ -371,8 +355,12 @@
         document.getElementById("myNav").style.width = "0%";
       }
 
-      $(".closeNav").click(() => {
+      $(".closeNav,.closebtn").click(() => {
         closeNav();
+      });
+
+      $(".icon-nav").click(() => {
+        openNav();
       });
 
       $(document).ready(function () {
